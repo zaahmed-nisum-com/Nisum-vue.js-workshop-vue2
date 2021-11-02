@@ -9,6 +9,8 @@
     </div>
     <p v-if="isDarkMode">{{ isDarkMode }}</p>
     <p v-if="!isDarkMode">{{ isDarkMode }}</p>
+    <div v-show="isDarkMode" style="background-color:red; height:10px"></div>
+    <div v-show="!isDarkMode" style="background-color:Green; height:10px"></div>
     <div>
       <div v-for="(user, index) of users" v-bind:key="index + 1">
         <p>{{ user.name }}</p>
