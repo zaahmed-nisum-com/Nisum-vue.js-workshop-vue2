@@ -1,12 +1,17 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <p>{{ num1 + num2 }}</p>
+    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+    <!-- <p>{{ name }}</p> -->
+    <!-- <Header/> -->
+    <!-- <ProductCard/> -->
+    <!-- <AddProductForm/> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <!-- <Filters_/> -->
-    <!-- <LifeCycle/> -->
+    <LifeCycle />
     <!-- <Interpolation/> -->
     <!-- <Directive/> -->
-    <Shorthands/>
+    <!-- <Shorthands/> -->
     <!-- <ApiCalling/> -->
     <!-- <Loop_Conditions/> -->
   </div>
@@ -17,23 +22,35 @@
 // import Directive from './workshop/Directive.vue'
 // import Filters_ from './workshop/Filters_.vue'
 // import Interpolation from './workshop/Interpolation.vue'
-// import LifeCycle from './workshop/LifeCycle.vue'
+import LifeCycle from "./workshop/LifeCycle.vue";
 // import Loop_Conditions from './workshop/Loop&Conditions.vue'
-import Shorthands from './workshop/Shorthands.vue'
-
+// import Shorthands from './workshop/Shorthands.vue'
+// import Header from './components/header'
+// import ProductCard from './components/cards/productCard'
+// import AddProductForm from './workshop/Forms/AddProduct.vue'
 
 export default {
-  name: 'App',
+  name: "App",
+  data() {
+    return {
+      num1: 1,
+      num2: 2,
+    };
+  },
+
   components: {
-    // LifeCycle,
+    // Header,
+    // ProductCard,
+    // AddProductForm,
+    LifeCycle,
     // Interpolation,
     // Directive,
-    Shorthands,
-    // ApiCalling, 
+    // Shorthands,
+    // ApiCalling,
     // Filters_,
     // Loop_Conditions,
-  }
-}
+  },
+};
 </script>
 
 <style>
